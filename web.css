@@ -1,21 +1,36 @@
+html{margin: 0; padding: 0;}
 /* Set the font family and color for the entire website */
 body {
+  display: inline-block;
   font-family: Verdana, sans-serif;
   color: #030101ec;
   background-color: #f3800525;
   overflow-x: hidden;
-}
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+  }
+
 /* Set the font size and line height of the main content */
 main {
+  display: inline-block;
   font-size: 1.5rem;
   line-height: 1.5;
   color:#100b0b;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 /* Set the background color of the footer */
 footer {
   color: #141414;
-  padding: 1rem;
+  position: relative;
+  bottom: -520px;
+  left:0;
+  padding: 0;
+  margin-top: 220px;
+  margin-bottom: 0;
 }
 
 /* Set the font size and color of the footer text */
@@ -77,7 +92,7 @@ footer p {
 
 .linkedin{
   position: absolute;
-  top: 230px;
+  top: 300px;
   left: 600px;
 }
 a img:hover {
@@ -85,12 +100,12 @@ a img:hover {
 }
 .github{
   position: absolute;
-  top: 230px;
+  top: 300px;
   left: 700px;
 }
 .gmail{
   position: absolute;
-  top: 230px;
+  top: 300px;
   left: 508px;
 }
 .grid-container {
@@ -122,16 +137,10 @@ a img:hover {
   color: rgb(244, 168, 5);
 }
 .box {
-  /* 设置线性渐变背景 */
   background: linear-gradient(to right, #f5e106 0%, #f6c206 50%, #f7a203 100%);
   display: inline-block;
   color:#200505b0;
   border-radius: 5px;}
-
-.high{
-  text-align: center;
-}
-
 
 .record-player {
   background-color: #d5882f;
@@ -234,9 +243,9 @@ a img:hover {
   }
 }
 .visualizer{
-  position: absolute;
-  top: 1755px;
-  left: 345px;
+  position: relative;
+  top: -40px;
+  left: 340px;
 }
 
 .scaled {
@@ -244,32 +253,35 @@ a img:hover {
 }
 .text1{
   position:relative;
-  top:-420px;
+  top:-460px;
   left:0px;
   display: inline-block;
 }
 .text2{
   position:relative;
-  top:-350px;
+  top:-800px;
   left:500px;
   display: inline-block;
 }
 .text3{
   position:relative;
-  top:-700px;
+  top:-1000px;
   left:0px;
   display: inline-block;
 }
 a{
-  color:#f1d507;
+  color:#fb9b0a;
 }
 .tank_game{
-  position: absolute;
-  top: -5px;
+  position: relative;
+  top: -40px;
   left: 165px;
 }
 .connect_4{
-  position: absolute;
-  top: -5px;
+  position: relative;
+  top: -40px;
   left: 230px;
+}
+#contact, #about, #projects, #skills{
+  padding-top: 40px;
 }
