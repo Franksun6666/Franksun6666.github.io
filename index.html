@@ -5,8 +5,9 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		.mv_container {
+		display: block;
 		position:relative;
-		top:-80px;
+		top:-150px;
   		left:800px;
 		height: 400px;
 		width: 600px;
@@ -17,6 +18,7 @@
 		height: 400px;  
 		}
 		.mv_overlay {
+		display: block;
 		position:relative;
 		top:-400px;
 		height: 100%;
@@ -40,8 +42,9 @@
 		}
 
 		.tg_container {
+		display: block;
 		position:relative;
-		top:-500px;
+		top:-800px;
   		left:800px;
 		height: 450px;
 		width: 600px;
@@ -52,6 +55,7 @@
 		height: 450px;  
 		}
 		.tg_overlay {
+		display: block;
 		position:relative;
 		top: -450px;
 		height: 100%;
@@ -73,15 +77,54 @@
 		transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
 		}
-		ul.a {list-style-type: circle;}
+		.c4_container {
+		display: block;
+		position:relative;
+		top:-550px;
+  		left:-150px;
+		height: 400px;
+		width: 500px;
+		}
+		.c4{
+		display: block;
+		width: 500px;
+		height: 400px;  
+		}
+		.c4_overlay {
+		display: block;
+		position:relative;
+		top: -400px;
+		height: 100%;
+  		width: 100%;
+		opacity: 0;
+		transition: .7s ease;
+		background-color: #f1d507;
+		}
+
+		.c4_container:hover .c4_overlay {
+		opacity: 0.8;
+		}
+		.c4text {
+		color: rgb(249, 137, 9);
+		font-size: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		}
+		ul.circle {list-style-type: circle;}
 		.centered-text {text-align: center;}
 		.bold-text {font-weight: bold;}
     	.thin-text {font-weight: lighter;}
 		.small-text{font-size: small;}
 		.medium-text{font-size: medium;}
-		.c4{font-weight: bold; position: relative;  top:-350px; left:500px;}
-		.tankgame{font-weight: bold; position: relative;  top:-250px; left:0px;}
-		.cc{position:relative; top:-500px;}
+		.c44{font-weight: bold; position: relative;  top:-350px; left:500px;}
+		.tankgame{font-weight: bold; position: relative;  top:-500px; left:0px;}
+		.sk{position:relative; top:100px;}
+		.pj{position:relative; top:0px;}
+		.cc{position:relative; top:	600px;  }
+		#projects{height: 150vh;}
 	  </style>
     <link rel="stylesheet" type="text/css" href="web.css">
 	<title>Frank Sun's Personal Website</title>
@@ -184,7 +227,6 @@
 	<button onclick="topFunction()" id="myBtn" title="Go to top">&#10514;</button>
 	<style>
 		#myBtn {
-			display: none; 
 			position: fixed; 
 			display:inline-block;
 			bottom: 20px; 
@@ -200,7 +242,8 @@
 			font-size: 30px; 
 			text-align: center;
 			width: 45px;
-			height: 45px;}
+			height: 45px;
+			}
 		#myBtn:hover {
 			background-color: #555;}
 	</style>
@@ -249,12 +292,13 @@
 		<br><br><br><br>
 		<section id="about">
 			<h2><div class="centered-text">About Me</div></h2>
-			<ul class="a"><p><li>My name is Wentao (Frank) Sun, I am currently enrolled in level 2 of the 4-year Honours Computer Science co-op program also minoring in Finance at
+			<ul class="circle"><p><li>My name is Wentao (Frank) Sun, I am currently enrolled in level 2 of the 4-year Honours Computer Science co-op program also minoring in Finance at
                 <a href="https://www.mcmaster.ca/">Mcmaster University</a></li>
                 <li>I'm fluent in both English and Mandarin.</li>
                 <li>I gained strong analytical, problem solving, and teamwork skills established through course work and project work.</li>
                 <li>I also developed high level of communication and organizational skills  during participation in Hackathons.</li></p></ul>
 		</section>
+		<div class="sk">
 		<section id="skills">
 			<h2><div class="centered-text">Skills</div></h2>
 			<div class="grid-container">
@@ -291,13 +335,14 @@
 					<p>Power Shell</p>
 				  </div>
 				<div class="grid-item">
-					<img src="assembly.png" alt="RISC-V Assembly" style="width: 30%;">
+					<img src="assembly.png" alt="RISC-V Assembly" style="width: 30%; height: 47%;">
 					<p>RISC-V Assembly</p>
 				  </div>
-			  </div>
-
+			</div>
 		</section>
-
+		</div>
+		<br><br><br><br>
+		<div class="pj">
 		<section id="projects">
 			<h2><div class="centered-text">Projects</div></h2>
 			<div class="bold-text">CS1XD3 Math Visualizer </div>
@@ -310,19 +355,28 @@
 						<div class="mv_overlay"><div class="visualtext">Math Visualizer</div></div>
 				</div>
 			</div>
-				<ul class="a"> <div class="text1">
+			<div class="text1">
+				<ul class="circle"> 
 				<li><p class="medium-text">Developed a <a href="https://cs1xd3.online/ShowModulePublish?modulePublishId=e86591e7-edc9-4755-9043-ceebf830fd73">math visualizer</a> (linear algebra visualizer) using <a href="https://elm-lang.org/">Elm</a> and design thinking.</p></li> 
 				<li><p class="medium-text">Collaborated within a group, each member assigned a job and communicated <br> efficiently through <a href="https://www.microsoft.com/en-us/microsoft-teams/log-in/">Teams</a>. </p></li>
 				<li><p class="medium-text">Conducted multiple interviews with students, teachers, asked for their feeling and using <br>experience on this visualizer and added/deleted features based on these results.</p></li> 
 				<li><p class="medium-text">Created a <a href="DT.pptx">DT worksheet</a> and <a href="video.mp4">video presentation</a> for the visualizer. </p></li>
-				</div></ul> 
-			<div class="c4">Connect4 Game
+				</ul> 
+			</div>
+			<div class="c44">
+				<div class="bold-text">Connect4 Game</div>
 				<a href="https://github.com/Franksun6666/connect4">
 					<img src="gitbub.png" alt="Github2" style="width: 4%;" class="connect_4">
 				</a>
 			</div>
+			<div class="scaled">
+				<div class="c4_container">
+					<img src="c4.png" alt="Connect4" class="c4">
+						<div class="c4_overlay"><div class="c4text">Connect4</div></div>
+				</div>
+			</div>
 			<div class="text2">
-			<ul class="a">
+			<ul class="circle">
 			<li><p class="medium-text">Designed a Connect4 game using <a href="https://www.java.com">Java</a> and OOP principles(encapsulation,
 			inheritance, <br> and polymorphism).</p></li>
 			<li><p class="medium-text">Introduced an AI player that imitates the human player with winning strategies in
@@ -341,15 +395,16 @@
 				</div>
 			</div>
 			<div class="text3">
-				<ul class="a">
+				<ul class="circle">
 				<li><p class="medium-text">Created a tank game with a GUI using <a href="https://www.pygame.org/">pygame</a> in <a href="https://www.python.org/">Python</a>. User can control
 				the tank <br> using arrowkeys and shoot the bullet using space on the
 				keyboard to destroy enemy <br> tanks and win the game.</p></li>
-				</ul></div>
+				</ul>
+			</div>
 		</section>
+		</div>
 		<div class="cc">
 		<section id="contact">
-			
 			<h2><div class="centered-text">Contact Me</div></h2>
 			<p><div class="centered-text"><p class="bold-text">Wanna work or share ideas together?<br>
 				<p class="thin-text">
@@ -368,11 +423,11 @@
 					<img src="gitbub.png" alt="Github" style="width: 5%;" class="github">
 				  </a>
             </p>
+			</section>
 			</div>
-		</section>
+		<footer>
+			<p>&copy; 2023 - Present. All Rights Reserved.</p>	
+		</footer>
 	</main>
-	<footer>
-		<p>&copy; 2023 - Present. All Rights Reserved.</p>
-	</footer>
 </body>
 </html>
