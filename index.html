@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="light.css" id="theme-style">
+	<title>Frank Sun's Personal Website</title>
+</head>
+<body>
+	<div class="record-player">
+		<div class="record">
+		  <div class="label"></div>
+		</div>
+		<div class="tone-arm">
+		  <div class="control"></div>
+		</div>
+	</div>
+	<audio id="audioPlayer" class="my-song">
+	  <source src="bgm1.mp3" type="audio/mpeg">
+	  <source src="bgm2.mp3" type="audio/mpeg">
+	  <source src="bgm3.mp3" type="audio/mpeg">
+	  <source src="bgm4.mp3" type="audio/mpeg">
+	  <source src="bgm5.mp3" type="audio/mpeg">
+	  <source src="bgm6.mp3" type="audio/mpeg">
+	  <source src="bgm7.mp3" type="audio/mpeg">
+	  <source src="bgm8.mp3" type="audio/mpeg">
+	  <source src="bgm9.mp3" type="audio/mpeg">
+	  <source src="bgm10.mp3" type="audio/mpeg">
+	</audio>
+	<button id="songButton">
+		<img src="next.png" alt="next" style="width: 3%;" class="next"> 
+	</button>
+	<style>
+		#songButton{
+			display: inline-block;
+			border: none;
+			background: none;
+			padding: 0;
+			cursor: pointer;
+		}
+		.next{position: relative; top: 250px; left:720px;}
+	</style>
+	<script>
+		let state = false;
+		let record = document.querySelector(".record");
+		let toneArm = document.querySelector(".tone-arm");
+		let song = document.querySelector(".my-song");
+
+		let currentSongIndex = 0;
+		let songs = [
+			"bgm1.mp3",
+			"bgm2.mp3",
+			"bgm3.mp3",
+			"bgm4.mp3",
+			"bgm5.mp3",
+			"bgm6.mp3",
+			"bgm7.mp3",
+			"bgm8.mp3",
+			"bgm9.mp3",
+			"bgm10.mp3"
+		];
+
+		toneArm.addEventListener("click", () => {
+		if (state == false) {
+			record.classList.add("on");
+			toneArm.classList.add("play");
+			setTimeout(() => {song.play();}, 1000);} 
+		else {
+			record.classList.remove("on");
+			toneArm.classList.remove("play");
+			song.pause();
+		}
+		state = !state;
+		});
+		function changeSong() {
+		currentSongIndex = (currentSongIndex + 1) % songs.length;
+		song.src = songs[currentSongIndex];
+		song.play();
+
+		record.classList.add("on");
+		toneArm.classList.add("play");
+	}
+		song.addEventListener("ended", changeSong);
+		songButton.addEventListener("click", changeSong);
+	</script>
+
+	<button onclick="navigateToSection('#contact')" id="phone">Contact Me &#9743;</button>
+	<script>
+		function navigateToSection(sectionId) {window.location.href = sectionId;}
+	</script>
+	<a href="resume.pdf" target="_blank" >
+		<button class="resume-button">View Resume <i class="fa fa-download"></i></button>
+	  </a>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top">&#10514;</button>
+	<script>
+	  // Get the button:
+	  let mybutton = document.getElementById("myBtn");
+	  
+	  // When the user scrolls down 300px from the top of the document, show the button
+	  window.onscroll = function() {scrollFunction()};
+	  
+	  function scrollFunction() {
+		if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+		  mybutton.style.display = "block";
+		} else {
+		  mybutton.style.display = "none";
+		}
+	  }
+	  
+	  // When the user clicks on the button, scroll to the top of the document
+	  function topFunction() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	  }
+	</script>
+	<button id="theme-toggle">
+		<img src="sun.svg" alt="sun" style="width: 3%;" class="sun">
+		<img src="moon.png" alt="moon" style="width: 3%;" class="moon">
+	</button>
+	<style>
+		#theme-toggle{
+		display: inline-block;
+		border: none;
+		background: none;
+		padding: 0;
+		cursor: pointer;
+		}
+		
+	</style>
+	<script>
+		// Get the required elements
+		const themeToggle = document.getElementById('theme-toggle');
+		const themeStyle = document.getElementById('theme-style');
+
+		// Add an event listener to the button
+		themeToggle.addEventListener('click', function() {
+		// Get the current href value of the <link> tag
+		const currentTheme = themeStyle.getAttribute('href');
+
+		// Determine the new theme based on the current theme
+		const newTheme = currentTheme === 'light.css' ? 'dark.css' : 'light.css';
+
+		// Update the href value of the <link> tag to the new theme
+		themeStyle.setAttribute('href', newTheme);
+		});
+	</script>
+	<div class="navbar">
+		<ul>
+			<li><a href="#about">About Me</a></li>
+			<li><a href="resume.pdf">Resume</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact Me</a></li>
+		</ul>
+	  </div>
+	  
+	  <div class="header">
+		<h1><br><br>
+			<div class="animate__animated animate__lightSpeedInRight box">Welcome to my website!</div>
+			<br>
+			<br>
+			<p class="medium-text">Hi, I'm</p> <span class="highlight"><div class="animate__animated animate__bounceIn">Wentao Sun</div></span>
+			<p class="thin-text">Full Stack Software Developer.</p>
+		</h1>
+	  </div>
+	<main>
+		<br><br><br><br>
+		<section id="about">
+			<h2><div class="centered-text">About Me</div></h2>
+			<ul class="circle"><p><li>My name is Wentao (Frank) Sun, I am currently enrolled in level 2 of the 4-year Honours Computer Science co-op program also minoring in Finance at
+                <a href="https://www.mcmaster.ca/">Mcmaster University</a></li>
+                <li>In addition to English, I am proficient in Mandarin, enabling me to effectively communicate in both languages.</li>
+                <li>Throughout my academic journey, I have cultivated robust analytical, problem-solving, and teamwork skills, honed through rigorous coursework and engaging project work.</li>
+                <li>Furthermore, my active participation in Hackathons has nurtured my ability to communicate at a high level and effectively organize tasks, thereby enhancing my overall skill set.</li></p></ul>
+		</section>
+		<div class="sk">
+		<section id="skills">
+			<h2><div class="centered-text">Skills</div></h2>
+			<div class="grid-container">
+				<div class="grid-item">
+					<img src="python.png" alt="Python" style="width: 25%;">
+				  <p>Python</p>
+				</div>
+				<div class="grid-item">
+				  <img src="java.png" alt="Java" style="width: 25%;height:58%">
+				  <p>Java</p>
+				</div>
+				<div class="grid-item">
+					<img src="C.png" alt="C" style="width: 25%;">
+					<p>C</p>
+				  </div>
+				<div class="grid-item">
+					<img src="haskell.png" alt="Haskell" style="width: 35%; height:60%">
+					<p>Haskell</p>
+				  </div>
+				<div class="grid-item">
+					<img src="db2.png" alt="IBM DB2" style="width: 25%;">
+					<p>IBM DB2</p>
+				  </div>
+				<div class="grid-item">
+					<img src="latex.png" alt="Latex" style="width: 20%;">
+					<p>Latex</p>
+				  </div>
+				<div class="grid-item">
+					<img src="csshtml.png" alt="CSS/HTML" style="width: 30%; height:40%">
+					<p>CSS/HTML</p>
+				  </div>
+				<div class="grid-item">
+					<img src="powershell.png" alt="Power Shell" style="width: 20%;">
+					<p>Power Shell</p>
+				  </div>
+				<div class="grid-item">
+					<img src="assembly.png" alt="RISC-V Assembly" style="width: 30%; height: 47%;">
+					<p>RISC-V Assembly</p>
+				  </div>
+			</div>
+		</section>
+		</div>
+		<br><br><br><br>
+		<div class="pj">
+		<section id="projects">
+			<h2><div class="centered-text">Projects</div></h2>
+			<div class="bold-text">CS1XD3 Math Visualizer </div>
+			<a href="https://github.com/Franksun6666/CS1XD3-Math-Visualizer">
+				<img src="gitbub.png" alt="Github1" style="width: 4%;" class="visualizer">
+			  </a>
+			<div class="scaled">
+				<div class="mv_container">
+					<img src="math_visualizer.png" alt="Math Visualizer" class="visual">
+						<div class="mv_overlay"><div class="visualtext">Math Visualizer</div></div>
+				</div>
+			</div>
+			<div class="text1">
+				<ul class="circle"> 
+				<li><p class="medium-text">Developed a <a href="https://cs1xd3.online/ShowModulePublish?modulePublishId=e86591e7-edc9-4755-9043-ceebf830fd73">math visualizer</a> (linear algebra visualizer) using <a href="https://elm-lang.org/">Elm</a> and design thinking.</p></li> 
+				<li><p class="medium-text">Collaborated within a group, each member assigned a job and communicated <br> efficiently through <a href="https://www.microsoft.com/en-us/microsoft-teams/log-in/">Teams</a>. </p></li>
+				<li><p class="medium-text">Conducted multiple interviews with students, teachers, asked for their feeling and using <br>experience on this visualizer and added/deleted features based on these results.</p></li> 
+				<li><p class="medium-text">Created a <a href="DT.pptx">DT worksheet</a> and <a href="video.mp4">video presentation</a> for the visualizer. </p></li>
+				</ul> 
+			</div>
+			<div class="c44">
+				<div class="bold-text">Connect4 Game</div>
+				<a href="https://github.com/Franksun6666/connect4">
+					<img src="gitbub.png" alt="Github2" style="width: 4%;" class="connect_4">
+				</a>
+			</div>
+			<div class="scaled">
+				<div class="c4_container">
+					<img src="c4.png" alt="Connect4" class="c4">
+						<div class="c4_overlay"><div class="c4text">Connect4</div></div>
+				</div>
+			</div>
+			<div class="text2">
+			<ul class="circle">
+			<li><p class="medium-text">Designed a Connect4 game using <a href="https://www.java.com">Java</a> and OOP principles(encapsulation,
+			inheritance, <br> and polymorphism).</p></li>
+			<li><p class="medium-text">Introduced an AI player that imitates the human player with winning strategies in
+			hand.</p></li>
+			</ul></div>
+			<div class="tankgame">
+			<div class="bold-text"> Tank Game </div>
+				<a href="https://github.com/Franksun6666/Tank-Game">
+					<img src="gitbub.png" alt="Github2" style="width: 4%;" class="tank_game">
+				</a>
+			</div>
+			<div class="scaled">
+				<div class="tg_container">
+					<img src="tg.png" alt="Tank game" class="tg">
+						<div class="tg_overlay"><div class="tgtext">Tank Game</div></div>
+				</div>
+			</div>
+			<div class="text3">
+				<ul class="circle">
+				<li><p class="medium-text">Created a tank game with a GUI using <a href="https://www.pygame.org/">pygame</a> in <a href="https://www.python.org/">Python</a>. User can control
+				the tank <br> using arrowkeys and shoot the bullet using space on the
+				keyboard to destroy enemy <br> tanks and win the game.</p></li>
+				</ul>
+			</div>
+		</section>
+		</div>
+		<div class="cc">
+		<section id="contact">
+			<h2><div class="centered-text">Contact Me</div></h2>
+			<p><div class="centered-text"><p class="bold-text">Wanna work or share ideas together?<br>
+				<p class="thin-text">
+				phone: 249-872-5998
+				<br> email:sunw53@mcmaster.ca</p></div>
+                <br>
+				<a href="mailto:sunw53@mcmaster.ca">
+					<img src="gmail.png" alt="Gmail" style="width: 5%;" class="gmail">
+				  </a>
+                <br>
+				<a href="https://www.linkedin.com/in/wentao-sun-0a275122b">
+					<img src="linkedin.png" alt="Linkedin" style="width: 6%;" class="linkedin">
+				  </a>				  
+                <br>
+				<a href="https://github.com/Franksun6666">
+					<img src="gitbub.png" alt="Github" style="width: 5%;" class="github">
+				  </a>
+            </p>
+			</section>
+			</div>
+		<footer>
+			<p>&copy; 2023 - Present. All Rights Reserved.</p>	
+		</footer>
+	</main>
+</body>
+</html>
