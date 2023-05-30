@@ -1,4 +1,3 @@
-/* Set the font family and color for the entire website */
 body {
     display: inline-block;
     font-family: Verdana, sans-serif;
@@ -9,8 +8,7 @@ body {
     padding-bottom: 0;
     border-bottom: 0;
     }
-  
-  /* Set the font size and line height of the main content */
+
   main {
     display: inline-block;
     font-size: 1.5rem;
@@ -21,7 +19,6 @@ body {
     border-bottom: 0;
   }
   
-  /* Set the background color of the footer */
   footer {
     color: #f8f8f8;
     position: relative;
@@ -32,29 +29,28 @@ body {
     margin-bottom: 0;
   }
   
-  /* Set the font size and color of the footer text */
+
   footer p {
     font-size: 1rem;
     color: #faf6f6;
   }
   
   .navbar {
-    position: fixed;  /* This fixes the navigation bar to the top of the screen */
+    position: fixed;  
     top: 0;
     left: 0;
-    width: 100%;  /* This sets the width of the navigation bar to be 100% of the screen */
-    z-index: 1;  /* This sets the z-index of the navigation bar higher than other elements, so it appears on top */
+    width: 100%;  
+    z-index: 1;  
   }
   
   .header {
-    margin-top: 50px;  /* This sets the margin between the top of the header container and the bottom of the navigation bar */
-    /* Other styles for the header container */
+    margin-top: 50px;  
     font-size: large;
     color:#fdfdfd
   }
   
   .navbar {
-    background-color: #05d8fdf6; /* Set the background color of the navigation bar */
+    background-color: #05d8fdf6; 
     height: 50px;
     border-radius: 20px;
   }
@@ -398,10 +394,10 @@ body {
     }
     #phone {
     display: inline-block;
-    position: absolute; /* Fixed/sticky position */
-    bottom: 60px; /* Adjust the bottom position as needed */
-    left: 250px; /* Adjust the left position as needed */
-    z-index: 999; /* Ensure the button appears above other elements */
+    position: absolute; 
+    bottom: 60px; 
+    left: 250px; 
+    z-index: 999; 
     padding: 15px 20px;
     border: none;
     border-radius: 7px;
