@@ -37,7 +37,7 @@
 	<script>
 		let state = false;
 		let record = document.querySelector(".record");
-		let toneArm = document.querySelector(".tone-arm");
+		let TA = document.querySelector(".tone-arm");
 		let song = document.querySelector(".my-song");
 
 		let currentSongIndex = 0;
@@ -47,15 +47,16 @@
 			"bgm3.mp3"
 		];
 
-		toneArm.addEventListener("click", () => {
-		if (state == false) {
-			record.classList.add("on");
-			toneArm.classList.add("play");
-			setTimeout(() => {song.play();}, 1000);} 
-		else {
+		TA.addEventListener("click", () => {
+		if (state) {
 			record.classList.remove("on");
-			toneArm.classList.remove("play");
+			TA.classList.remove("play");
 			song.pause();
+			} 
+		else {
+			record.classList.add("on");
+			TA.classList.add("play");
+			setTimeout(() => {song.play();}, 1000);
 		}
 		state = !state;
 		});
@@ -65,7 +66,7 @@
 		song.play();
 
 		record.classList.add("on");
-		toneArm.classList.add("play");
+		TA.classList.add("play");
 	}
 		song.addEventListener("ended", changeSong);
 		songButton.addEventListener("click", changeSong);
