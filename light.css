@@ -4,11 +4,12 @@ body {
   color: #030101ec;
   background-color: #f3800525;
   overflow-x: hidden;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
+  min-width: 1200px;
+  height: 2200px;
+  position: relative;
+  display:flex;
+  justify-content:center;
   }
-
 
 main {
   display: inline-block;
@@ -20,7 +21,9 @@ main {
   border-bottom: 0;
 }
 
-
+#about{
+  display:inline-block;
+}
 footer {
   color: #141414;
   position: relative;
@@ -393,9 +396,9 @@ a{
   }
   #phone {
   display: inline-block;
-  position: absolute; 
-  bottom: 60px; 
-  left: 250px; 
+  position: relative; 
+  bottom: -480px; 
+  right: 750px; 
   z-index: 999; 
   padding: 15px 20px;
   border: none;
@@ -415,9 +418,9 @@ a{
   .resume-button {
   display: inline-block;
   position: absolute; 
-  bottom: 60px; 
-  left: 20px; 
-  z-index: 999; 
+  bottom: 1660px; 
+  right: 1050px; 
+  z-index: 99; 
   padding: 15px 20px;
   border: none;
   border-radius: 7px;
