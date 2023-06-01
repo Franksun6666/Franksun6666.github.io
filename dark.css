@@ -1,14 +1,16 @@
 body {
-    display: inline-block;
-    font-family: Verdana, sans-serif;
-    color: #f8f5f5;
-    background-color: #080708e1;
-    overflow-x: hidden;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 0;
-    }
-
+  display: inline-block;
+  font-family: Verdana, sans-serif;
+  color: #fbfbfb;
+  background-color: #0b0600fc;
+  overflow-x: hidden;
+  min-width: 1200px;
+  height: 2000px;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  }
+  
   main {
     display: inline-block;
     font-size: 1.5rem;
@@ -394,9 +396,9 @@ body {
     }
     #phone {
     display: inline-block;
-    position: absolute; 
-    bottom: 60px; 
-    left: 250px; 
+    position: relative; 
+    bottom: -480px; 
+    right: 750px; 
     z-index: 999; 
     padding: 15px 20px;
     border: none;
@@ -416,9 +418,9 @@ body {
     .resume-button {
     display: inline-block;
     position: absolute; 
-    bottom: 60px; 
-    left: 20px; 
-    z-index: 999; 
+    bottom: 1460px; 
+    right: 1050px; 
+    z-index: 99; 
     padding: 15px 20px;
     border: none;
     border-radius: 7px;
